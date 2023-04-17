@@ -20,7 +20,12 @@ import { LitElement, html, css } from 'lit';
 
   render() {
     return html`
-
+    <div class="outline">
+    <div class="weekly-syllabus">
+      <div class="week">Week ${this.week}</div>
+      <div class="week-info">${this.compTime}</div>
+    </div>
+  </div>
     `;
   }
 }
