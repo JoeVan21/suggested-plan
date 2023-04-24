@@ -15,7 +15,7 @@ import { LitElement, html, css } from 'lit';
 
   constructor() {
     super();
-    this.week = '2';
+    this.week = '1';
   }
 
   render() {
