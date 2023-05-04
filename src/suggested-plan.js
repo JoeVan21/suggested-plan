@@ -6,37 +6,48 @@ import { LitElement, html, css } from 'lit';
   static properties = {
     header: { type: String },
     weekNum: { type: String },
-    timeFrame: { type: String },
+    timeFrame: { type: Number },
     header: { type: String },
     info: { type: String }
   }
 
-  static styles = css`
-    :host {
-      display: block;
+  static get styles() {
+    return css`
+    .week {
+      width: 25%;
     }
+   
+    .description {
+      width: 75%;
+    }
+
+    @media screen and (min-width: 300px) and (max-width: 800px) {
+      .course {
+        font-size: 14px;
+      }
   `;
+  }
 
   constructor() {
     super();
     this.weekNum = '1';
-    this.timeFrame= '3 Hours';
-    this.header = 'Misconceptions about happiness';
+    this.timeFrame= '2';
+    this.header = 'MHeader';
     this.info =
-      'In this module, you will learn what it means to be happy and why pursuing happiness is not a pointless endeavor. Dr. Santos addresses how our minds lie to us and how the science shows that our misconceptions about money, grades, and social media are holding us back from implementing the techniques studied in positive psychology.';
+      'Filler';
   
   }
 
   render() {
     return html`
     <div class="wrapper">
-    <div class="weekly-syllabus">
+    <div class="course">
       <div class="week">
         <p>Week</p>
         ${this.weekNum}
       </div>
-      <div class="week-info">
-        ${this.timeFrame}
+      <div class="description">
+        ${this.timeFrame} hours to complete
         <p>${this.header}</p>
         <p>${this.info}</p>
       </div>
@@ -45,5 +56,4 @@ import { LitElement, html, css } from 'lit';
     `;
   }
 }
-
 customElements.define('suggested-plan', SuggestedPlan);
