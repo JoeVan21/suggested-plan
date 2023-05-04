@@ -33,7 +33,11 @@ export class Daily extends LitElement {
   }
 
   static get style() {
-    return css``;
+    return css`
+    .wrapper {
+      border: 2px solid overscroll-behavior-block;
+    }
+    `;
   }
 
   render() {
