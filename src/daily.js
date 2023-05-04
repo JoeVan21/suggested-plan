@@ -19,7 +19,7 @@ export class Daily extends LitElement {
   }
 
   updateDaily() {
-    const address = new URL('../api/daily.js', import.meta.url).href;
+    const address = '../api/daily.js';
     fetch(address)
       .then(response => {
         if (response.ok) {
