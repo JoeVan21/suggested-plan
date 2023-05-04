@@ -47,6 +47,7 @@ export class Daily extends LitElement {
                 timeFrame="${daily.timeFrame}"
                 header="${daily.header}"
                 info="${daily.info}"
+                summary="${daily.summary}"
               >
               </suggested-plan>
               <div></div>

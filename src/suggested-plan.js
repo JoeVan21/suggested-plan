@@ -8,7 +8,8 @@ import { LitElement, html, css } from 'lit';
     header: { type: String },
     weekNum: { type: String },
     timeFrame: { type: Number },
-    info: { type: String }
+    info: { type: String },
+    summary: { type: String}
   };
 }
 
@@ -19,10 +20,12 @@ import { LitElement, html, css } from 'lit';
       font-size: 15px;
     }
     .course {
+      margin: 20px;
       display: flex;
     }
     .week {
       width: 25%;
+      text-alight: center;
       font-size: 25px;
     }
    
@@ -45,6 +48,7 @@ import { LitElement, html, css } from 'lit';
     this.header = 'Header';
     this.info =
       'Filler';
+      this.summary = '9 Videos (20 minutes total) 5 Readings'
   
   }
 
@@ -60,6 +64,7 @@ import { LitElement, html, css } from 'lit';
         ${this.timeFrame} hours to complete
         <p>${this.header}</p>
         <p>${this.info}</p>
+        <p> ${this.summary}</p>
       </div>
     </div>
   

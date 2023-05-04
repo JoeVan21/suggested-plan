@@ -6,18 +6,21 @@ export default async function handler(request, res) {
             "timeFrame": "2",
             "header": "Introduction",
             "info": "Why take this course?",
+            "summary": "9 Videos (20 minutes total) 5 Readings"
         },
         {
             "weekNum": "1",
             "timeFrame": "2",
             "header": "Introduction",
             "info": "Why take this course?",
+            "summary": "9 Videos (20 minutes total) 5 Readings"
         },
         {
             "weekNum": "1",
             "timeFrame": "2",
             "header": "Introduction",
             "info": "Info",
+            "summary": "9 Videos (20 minutes total) 5 Readings"
         }
     ];
     res.setHeader('Cache-Control', 'max-age=0, s-maxage=1800');
