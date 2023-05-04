@@ -14,6 +14,13 @@ import { LitElement, html, css } from 'lit';
 
   static get styles() {
     return css`
+    :host {
+      display: block;
+      font-size: 15px;
+    }
+    .course {
+      display: flex;
+    }
     .week {
       width: 25%;
     }
@@ -42,7 +49,7 @@ import { LitElement, html, css } from 'lit';
 
   render() {
     return html`
-    <div class="wrapper">
+    
     <div class="course">
       <div class="week">
         <p>Week</p>
@@ -54,7 +61,7 @@ import { LitElement, html, css } from 'lit';
         <p>${this.info}</p>
       </div>
     </div>
-  </div>
+  
     `;
   }
 }
