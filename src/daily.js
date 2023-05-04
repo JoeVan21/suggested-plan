@@ -42,13 +42,13 @@ export class Daily extends LitElement {
         ${this.dailys.map(
           daily => html`
             <div class="item">
-              <plan-template
+              <suggested-plan
                 weekNum="${daily.weekNum}"
                 timeFrame="${daily.timeFrame}"
                 header="${daily.header}"
                 info="${daily.info}"
               >
-              </plan-template>
+              </suggested-plan>
               <div></div>
             </div>
           `
