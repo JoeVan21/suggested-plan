@@ -23,11 +23,12 @@ import { LitElement, html, css } from 'lit';
     }
     .week {
       width: 25%;
+      font-size: 25px;
     }
    
     .description {
       width: 75%;
-      border-bottom: 1px inset;
+      border-bottom: 1px inset #000000;
     }
 
     @media screen and (min-width: 300px) and (max-width: 800px) {
@@ -41,7 +42,7 @@ import { LitElement, html, css } from 'lit';
     super();
     this.weekNum = '1';
     this.timeFrame= '2';
-    this.header = 'MHeader';
+    this.header = 'Header';
     this.info =
       'Filler';
   

@@ -8,17 +8,17 @@ export class Daily extends LitElement {
 
   static get properties() {
     return {
-      plan: { type: Array },
+      dailys: { type: Array },
     };
   }
 
   constructor() {
     super();
-    this.plan = [];
-    this.updatePlan();
+    this.dailys = [];
+    this.updateDaily();
   }
 
-  updatePlan() {
+  updateDaily() {
     const address = new URL('../api/daily.js', import.meta.url).href;
     fetch(address)
       .then(response => {
@@ -28,7 +28,7 @@ export class Daily extends LitElement {
         return [];
       })
       .then(data => {
-        this.plan = data;
+        this.dailys = data;
       });
   }
 
@@ -39,14 +39,14 @@ export class Daily extends LitElement {
   render() {
     return html`
       <div class="wrapper">
-        ${this.plan.map(
-          plan => html`
+        ${this.dailys.map(
+          daily => html`
             <div class="item">
               <plan-template
-                weekNum="${plan.weekNum}"
-                compTime="${plan.compTime}"
-                weekTitle="${plan.weekTitle}"
-                weekDescription="${plan.weekDescription}"
+                weekNum="${daily.weekNum}"
+                timeFrame="${daily.timeFrame}"
+                header="${daily.header}"
+                info="${daily.info}"
               >
               </plan-template>
               <div></div>
