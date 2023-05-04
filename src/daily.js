@@ -54,7 +54,6 @@ export class Daily extends LitElement {
                 summary="${daily.summary}"
               >
               </suggested-plan>
-              <div></div>
             </div>
           `
         )}
