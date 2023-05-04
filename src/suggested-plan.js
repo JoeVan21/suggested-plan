@@ -3,13 +3,14 @@ import { LitElement, html, css } from 'lit';
 
 
  export class SuggestedPlan extends LitElement {
-  static properties = {
+  static get properties() {
+    return {
     header: { type: String },
     weekNum: { type: String },
     timeFrame: { type: Number },
-    header: { type: String },
     info: { type: String }
-  }
+  };
+}
 
   static get styles() {
     return css`
@@ -19,6 +20,7 @@ import { LitElement, html, css } from 'lit';
    
     .description {
       width: 75%;
+      border-bottom: 1px inset;
     }
 
     @media screen and (min-width: 300px) and (max-width: 800px) {
